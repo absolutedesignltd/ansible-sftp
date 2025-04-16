@@ -28,7 +28,7 @@
     dest=/etc/ssh/sshd_config
     validate="/usr/sbin/sshd -T -f %s"
     line="Subsystem sftp internal-sftp"
-    regexp="^Subsystem sftp"
+    regexp="^Subsystem\s*sftp"
   notify: restart ssh
   tags:
     - networking
